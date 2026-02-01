@@ -39,5 +39,15 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-source-airtable',
+      options: {
+        apiKey: 'YOUR_AIRTABLE_API_KEY', // Or better, use environment variables
+        baseId: 'YOUR_AIRTABLE_BASE_ID', // Or better, use environment variables
+        tableName: 'Blog Posts',
+        tableView: 'Published', // Optional: use a view to filter only published posts
+        // ... other options
+      },
+    },
   ],
 }
